@@ -1,0 +1,8 @@
+<input
+  placeholder="Please enter your password"
+  type="password"
+  class="form-control pass-field"
+  name="password"
+  [ngStyle]="{ '--outline': 'solid 0.5px ' + colorListWeak[state] }"
+  (input)="onInputValueChange($event)"
+/>

@@ -1,0 +1,11 @@
+
+input:focus{
+  outline: var(--outline);
+}
+
+.pass-field {
+  width: 500px;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 36px;
+}

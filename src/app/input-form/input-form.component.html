@@ -1,40 +1,16 @@
 <div class="container">
   <div class="form-group">
-    <label for="password"><span>Password</span></label>
-    <hr>
-    <input
-      placeholder="Please enter your password"
-      type="password"
-      class="form-control pass-field"
-      name="password"
-      [(ngModel)]="password"
-      (keyup)="checkDificulty()"
-      [ngStyle]="{'--outline':'solid 0.5px ' + colorListWeak[state]}"
-    />
-    <div class="password-validator">
-      <div class="password-strength">
-        <div class="password-strength__fields">
-          <div
-            class="weak field"
-            [ngStyle]="{ 'background-color': colorListWeak[state] }"
-          ></div>
-          <div
-            class="medium field"
-            [ngStyle]="{ 'background-color': colorListMedium[state] }"
-          ></div>
-          <div
-            class="strong field"
-            [ngStyle]="{ 'background-color': colorListStrong[state] }"
-          ></div>
-        </div>
-        <div class="password-strength__description">
-          <div *ngIf="state==0">You could not have <span class="empty bold text-shadow">empty</span> password!</div>
-          <div *ngIf="state==1">the password is too <span class="short bold text-shadow">short</span>!</div>
-          <div *ngIf="state==2">the password is <span class="easy bold text-shadow">easy</span>.</div>
-          <div *ngIf="state==3">the password is <span class="medium bold text-shadow">medium</span>.</div>
-          <div *ngIf="state==4">the password is <span class="strong bold text-shadow">strong</span>.</div>
-        </div>
-      </div>
-    </div>
+    <form class="form"
+    [formGroup]="formGroup">
+      <label class="pw-label"><span>Password</span></label>
+      <hr />
+      <app-input-area [formControlName]="'userPassword'" (ngModelChange)="onKeyupPasswordInput()"></app-input-area>
+    </form>
+    <app-password-strength-area
+      [colorListWeak]="colorListWeak"
+      [colorListMedium]="colorListMedium"
+      [colorListStrong]="colorListStrong"
+      [state]="state"
+    ></app-password-strength-area>
   </div>
 </div>

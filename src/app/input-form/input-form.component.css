@@ -28,76 +28,12 @@
   row-gap: 5px;
 }
 
-.password-strength__fields {
-  display: flex;
-  column-gap: 10px;
-  width: 500px;
-  height: 20px;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-
-.field{
-  border: solid 1px white;
-  box-shadow: 0 0 2px black;
-}
-
-input:focus{
-  outline: var(--outline);
-}
-
-.form-group label{
+.pw-label{
   font-size: 36px;
   color: rgb(0, 0, 109);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.pass-field {
-  width: 500px;
-  height: 50px;
-  padding: 0 10px;
-  font-size: 36px;
-}
-
-.password-strength__description{
-  font-size: 24px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.field {
-  flex: 1 1 auto;
-  height: 100%;
-  border-radius: 3px;
-  background-color: grey;
-}
-
-.bold{
-  font-weight: bold;
-}
-
-.easy{
-  color: grey;
-}
-
-.short,.easy{
-  color: red;
-}
-
-.medium{
-  color: yellow;
-}
-
-.strong{
-  color: green;
-}
-
-.text-shadow{
-  -webkit-text-stroke: 1px black;
-}
-
-label{
   font-weight: bold;
   align-self: flex-start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 hr{
